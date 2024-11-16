@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David's Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Particle effect container -->
+    <div id="particles-js"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home" class="logo">David's Portfolio</a>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1><span class="typing">Welcome to My Portfolio</span></h1>
+        <p>Building creative digital experiences.</p>
+        <a href="#projects" class="cta-btn">Explore My Work</a>
+    </div>
+    <div class="quote-container">
+        <p id="quote"></p> <!-- No typing class added directly here -->
+    </div>
+</section>
+
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I'm a web designer with a passion for modern, user-centric websites.</p>
+        <div class="secret-area">
+            <p class="secret-text">This is a secret message!</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>My Blog</h3>
+                    <a href="http://sonleche.github.io/sonleche.blog/">Visit Site</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Website 2</h3>
+                    <a href="https://example.com">Visit Site</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Website 3</h3>
+                    <a href="https://example.com">Visit Site</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 David's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Particle.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>

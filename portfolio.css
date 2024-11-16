@@ -1,0 +1,338 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #121212;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.5s ease;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Particle effect container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keep it behind the main content */
+}
+
+/* Adjust the hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 165px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Ensure text is readable */
+    z-index: 1;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    animation: fadeInUp 2s ease;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+/* Typing Effect */
+.typing {
+    border-right: .1em solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(40, end), blink .5s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* Typing Effect for Quotes */
+.typing-quote {
+    border-right: .1em solid white; /* Blinking cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing-quote 6s steps(60, end), blink 0.75s step-end infinite; /* Typing and blinking */
+}
+
+/* Blinking cursor keyframes */
+@keyframes typing-quote {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Remove the blinking after typing */
+.finished-quote {
+    border-right: none; /* Stop the cursor after typing */
+}
+
+/* About Me Section */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+    position: relative; /* Ensure the hidden text is positioned relative to the About Me section */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Secret Area (hidden by default) */
+.secret-area {
+    position: absolute;
+    bottom: 10px; /* Position it in the bottom of the About Me section */
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden; /* Hide the secret text */
+    opacity: 0; /* Make it invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Add smooth transition */
+}
+
+/* Show the secret text when hovering over the About Me section */
+.about:hover .secret-area {
+    visibility: visible;
+    opacity: 1; /* Make it visible */
+}
+
+/* Style the secret text */
+.secret-text {
+    font-size: 1.5rem;
+    color: #ff9800;
+    font-style: italic;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #222;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-content a {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.project-content a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #121212;
+    text-align: center;
+    color: #fff;
+}
+
+/* Key Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 152, 0, 0.8); /* Glowing orange */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.6), 0 0 20px rgba(255, 152, 0, 0.4);
+}
+
+/* Custom Cursor Hover State */
+.hover-effect {
+    transform: scale(1.5);
+    background-color: rgba(255, 255, 255, 0.9); /* Changes color when hovering */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Quote styling */
+.quote-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #ff9800;
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: 300px;
+}
